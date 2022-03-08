@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --darkGradient: linear-gradient(
+  49deg,
+  hsl(251deg 97% 27%) 0%,
+  hsl(272deg 93% 28%) 33%,
+  hsl(294deg 88% 30%) 67%,
+  hsl(315deg 84% 32%) 100%
+);
+    --lightGradient: linear-gradient(
+        49deg,
+        hsl(251deg 87% 76%) 0%,
+        hsl(293deg 88% 64%) 33%,
+        hsl(330deg 80% 68%) 67%,
+        hsl(0deg 64% 89%) 100%
+      );
+    --gray: #f8f8f8;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: white;   
+    background-color: rgb(177, 177, 177);
+    transition: 0.2s background-color linear;
+}
+body.dark{
+    background-color: rgb(26, 26, 26);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.converter{
+    max-width: 768px;
+    width: 90%;
+    margin: 4em auto;
+    /* padding: 1em 0.8em; */
+    border-radius: 8px;
+    /* border: 1.5px solid black; */
+}   
+
+.inputs{
+    background: var(--lightGradient);
+    padding: 1em 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: background 500ms ease-in-out;
+}
+.inputs.dark{
+    background: var(--darkGradient);
+}
+.centered{
+    margin: 0 auto;
+    text-align: center;
+}
+.theme-btn{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    margin-left: 1em;
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    border: none;
+    text-align: start;
+    cursor: pointer;
+    transition: 0.3s background-color ease-in;
+}
+
+.theme-btn.dark{
+    background-color: rgba(15, 15, 15, 0.4);
+    color: white;
+}
+
+
+h3{
+    padding: 2em 0;
+}
+
+#input{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;;
+    color: white;
+    font-size: 2.5rem;
+    width: 15%;
+    padding: 0.4em 0;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+.info{
+    margin: 1.5em 0;
+}
+.results{
+    font-size: 1.15rem;
+    background-color: var(--gray);
+    color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 1.8em 1.2em;
+    text-align: center;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+.results.dark{
+    background: black;
+    color: white;
+}
+h4{
+    margin: 0 0 0.8em;
+}
+.conv-section{
+    margin: 1.6em 0;
+}
